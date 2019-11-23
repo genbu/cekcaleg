@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="theme-color" content="#ff6233">
+  <meta name="google-site-verification" content="66S99VL_BOOAVkfft32iGrG2t-i14SSxSpW1xVadb5Q" />
+  <title>Cek CALEG v1.0</title>
+  <link rel="icon" type="image/png" href="img/favicon.ico">
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="manifest.json" rel="manifest">
+</head>
+<body>
+<div class="section no-pad-bot" id="sectionHeader">
+  <div class="row center no-margin">
+    <div class="col s2"><img src="img/logo_simpang_300x300px.png" class="logo" alt="logo"></div>
+    <div class="col s8 no-margin no-padding">
+      <h4 class="judul center  no-margin no-padding">Cek Caleg <br>Kota Bogor</h4>
+      <p class=" no-margin no-padding">Biar lebih tau, lebih dekat dan yakin pilihnya!</p>
+    </div>
+    <div class="col s2"><img src="img/kpu.png" class="logo" alt="logo"></div>
+    </div>
+  </div>
+</div>
+<div class="section no-pad-top" id="sectionCalegCarousel">  
+  <div class="row center">
+    <div id="carouselCaleg" class="carousel center">
+      <!-- <div class="carousel-item">
+        <img src="img/logo.png" alt="logo">
+        <h5>Offline</h5>
+      </div>       -->
+    </div>
+  </div>
+  <div class="row center">
+    <div class="col s12 ddDapil no-margin">
+      <select id="dapilDropdown" class="judul white-text">
+        <option class="judul" value="6647" name="DAPIL 1 BOGOR TIMUR - TENGAH" selected >DAPIL 1 BOGOR TIMUR - TENGAH</option>
+        <option class="judul" value="6648" name="DAPIL 2 BOGOR UTARA">DAPIL 2 BOGOR UTARA</option>
+        <option class="judul" value="6649" name="DAPIL 3 BOGOR SELATAN">DAPIL 3 BOGOR SELATAN</option>
+        <option class="judul" value="6650" name="DAPIL 4 BOGOR BARAT">DAPIL 4 BOGOR BARAT</option>
+        <option class="judul" value="6651" name="DAPIL 5 TANAH SAREAL">DAPIL 5 TANAH SAREAL</option>
+      </select>
+    </div>
+  </div>
+</div>
+<footer class="page-footer red">
+  <div class="row center no-margin">
+    <div class="col s2"><img src="img/logo_simpang_300x300px.png" class="logo circle white" alt="logo"></div>
+    <div class="col s8">
+      <h5 class="judul white-text center">CEK CALEG KOTA BOGOGR</h5>
+    </div>
+    <div class="col s2"><img src="img/kpu.png" class="logo" alt="logo"></div>
+  </div>
+  <div class="footer-copyright center">
+    <div class="container">
+        Made by <a class="yellow-text text-lighten-3" href="https://www.linkedin.com/in/dedemy/">genbu</a>
+    </div>
+  </div>
+</footer>
+<div class="preloader-background">
+  <div class="preloader-wrapper big active">
+    <div class="spinner-layer spinner-blue">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+
+    <div class="spinner-layer spinner-red">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+
+    <div class="spinner-layer spinner-yellow">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+
+    <div class="spinner-layer spinner-red">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+  <img src="img/logo_simpang_300x300px.png" class="blinking logo-loading" alt="logo">
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/portabel.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+  function handleNetworkChange(event) {
+    if (navigator.onLine) {
+      // document.body.classList.remove("offline");
+      M.toast({html: 'Online!', classes: 'rounded red'});
+    } else {
+      // document.body.classList.add("offline");
+      M.toast({html: 'Offline!', classes: 'rounded grey'});
+    }
+  }
+  window.addEventListener("online", handleNetworkChange);
+  window.addEventListener("offline", handleNetworkChange);
+}  
+// window.isUpdateAvailable = new Promise(function(resolve, reject) {
+//   // lazy way of disabling service workers while developing
+//   if ('serviceWorker' in navigator && ['localhost', '127'].indexOf(location.hostname) === -1) {
+//     // register service worker file
+//     navigator.serviceWorker.register('sw.js')
+//       .then(reg => {
+//         reg.onupdatefound = () => {
+//           const installingWorker = reg.installing;
+//           installingWorker.onstatechange = () => {
+//             switch (installingWorker.state) {
+//               case 'installed':
+//                 if (navigator.serviceWorker.controller) {
+//                   // new update available
+//                   var toastHTML = '<span>New Content Available!</span><button onclick="window.location" class="btn-flat toast-action">Tap to Update</button>';
+//                   M.toast({html: toastHTML, displayLength:5000});
+//                   resolve(true);
+//                 } else {
+//                   // no update available
+//                   resolve(false);
+//                 }
+//                 break;
+//             }
+//           };
+//         };
+//       })
+//       .catch(err => console.error('[SW ERROR]', err));
+//   }
+// });
+</script>
+<script src="js/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC1Bb4Y1ErKQK6MC5grFAi0IbwCrTqzPQs",
+    authDomain: "cekcaleg.firebaseapp.com",
+    databaseURL: "https://cekcaleg.firebaseio.com",
+    projectId: "cekcaleg",
+    storageBucket: "",
+    messagingSenderId: "731387552926"
+  };
+  firebase.initializeApp(config);
+</script>
+</body>
+
+</html>
