@@ -1,0 +1,299 @@
+html,body{ 
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/MaterialIcons-Regular.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+.online,.offline{
+  right: auto;
+  left:23px;
+}
+a{color: #ff6233;}
+nav{
+  color:#ccc;
+}
+.logo{
+  height:60px;
+  width:auto;
+}
+
+.judul{
+  padding:10px 0;
+  margin:0;
+  color:#ff6233;
+  font-weight: 900;
+}
+.small{font-size: 12px!important;}
+.pad-top-bot{
+  padding:10px 0;
+}
+
+@media only screen and (max-width : 480px) {
+  .logo{
+    height:auto;
+    width:100%;
+  }
+  .judul{
+    text-align: center;
+  }
+}
+.no-margin{margin:0;}
+.no-padding{padding:0}
+.calegimg{
+  width:200px;
+  height:200px;
+  overflow: hidden;
+  border:solid 10px #fff;
+  box-shadow:1px 1px  rgba(0,0,0,0.1);
+  -moz-box-shadow:1px 1px  rgba(0,0,0,0.1);
+  -webkit-box-shadow: 1px 1px  rgba(0,0,0,0.1);
+  -o-box-shadow: 1px 1px  rgba(0,0,0,0.1);
+}
+.carousel{
+  top:-40px;
+  width: 100%;
+  height: 380px;
+  -webkit-perspective: 200px;
+  perspective: 200px;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;  
+}
+.carousel.carousel-item{
+  /* visibility: visible; */
+  width:200px;
+  height:200px;
+  overflow: hidden;
+}
+.calegimg img {
+  width:200px; 
+  height:auto;
+}
+.carouselCaption{
+  width:500px;
+  transform: translateX(-30%);
+}
+.carouselJudul{margin:0;}
+.carouselDesc{margin:0;}
+
+.ddDapil .select-wrapper{
+  width: 100%;
+  text-align-last:center;
+}
+.ddDapil .select-wrapper input.select-dropdown, .ddDapil .select-wrapper input.select-dropdown:focus{
+  font-weight: 900;
+  border-bottom:0px;
+  color:#fff;
+  margin: 5px 0 0 0;
+}
+.ddDapil .select-wrapper .caret{
+  fill:#fff;  
+}
+.ddDapil .select-dropdown.dropdown-content li{
+}
+.dropdown-content li>a, .dropdown-content li>span {
+  font-weight: 900;
+  font-size: 16px;
+    color: #ff6233;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+/*==================================================TABS=====================================================*/
+#tabCalegView{
+  border-radius: 10px 10px 0 0;
+}
+.tabs .tab a:hover, .tabs .tab a.active {
+  background-color: rgb(229, 66, 54);
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
+}
+.tabs .tab a {
+  font-weight: 900;
+  color: #ff6233;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-transition: color .28s ease, background-color .28s ease;
+  transition: color .28s ease, background-color .28s ease;
+}
+.tabs-content.carousel.carousel-slider .carousel-item.active{
+    position: relative;
+}
+.tabs .indicator{
+  background-color: #a7271d;
+  height:5px;
+}
+.tabs .tab a:focus,.tabs .tab a .active, .tabs .tab a:focus.active {
+    background-color: rgb(229, 66, 54);
+    color:#fff;
+}
+/*==================================================CARD=====================================================*/
+#sectionCalegView .card{
+  border-radius:10px!important;
+}
+#sectionCalegView .card-image, .card .card-image img{
+  border-radius:10px 10px 0px 0px !important;
+}
+#sectionCalegView .card-action{
+  border-radius:0px 0px 10px 10px !important;
+}
+#sectionCalegView .border-right{
+  border-right:1px solid #eee;
+}
+#sectionCalegView .chip {
+  display: inline-block;
+  height: 33px;
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(0,0,0,0.6);
+  line-height: 32px;
+  padding: 0px 2px;
+  border-radius: 9px;
+  background-color: #e4e4e4;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+#sectionCalegView .chip img {
+  float: left;
+  margin: 2px 0px 0 0px;
+  height: 29px;
+  width: 29px;
+  border-radius: 50%;
+}
+.calegimgProfil {
+  margin: 10px auto;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border: solid 10px #fff;
+  box-shadow: 1px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow: 1px 1px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 1px 1px rgba(0,0,0,0.1);
+  -o-box-shadow: 1px 1px rgba(0,0,0,0.1);
+}
+.calegimgProfil img {
+  width:200px;
+  height:auto;
+}
+.fullimg{
+  width:90%;
+  height:auto;
+  border-radius: 10px;
+  padding-bottom:10px;
+}
+/*==================================================MODAL=====================================================*/
+.carousel-item:not(.active){
+  visibility: hidden;
+}
+.modal{
+  width:90%;
+  height:90%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.modal .modal-content {
+  padding: 0px;
+}
+/*=================================================================SEARCH====================================================*/
+#findme {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -ms-zoom: 0.50;
+  -moz-transform: scale(0.50);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.50);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.50);
+  -webkit-transform-origin: 0 0;
+}
+#findmeContainer {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 75%;
+  background-color: #fff;
+}
+/* =================================================loading=========================================== */
+.preloader-wrapper {
+  position: absolute;
+  top :0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.preloader-background {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color:rgba(238, 238, 238, 0.9);
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.preloader-background p {
+  padding-top:120px;
+  margin-left: -60px;
+  opacity: 0.8;
+} 
+.logo-loading{
+  width:60px;
+  margin-left:-4px;
+}
+.blinking {
+	animation: blinker 1.5s linear infinite;
+}
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+/* ====================================================FETCH DATA=========================================== */
+#profilCaleg, #dokumenCaleg{
+  margin:0 -24px;
+}
+#profilCaleg .yellow-one,#dokumenCaleg .yellow-one{
+  background-color:rgba(0,0,0,0.02);
+}
+#profilCaleg .row .no-margin .yellow-one, #profilCaleg .row .no-margin,#dokumenCaleg .row .no-margin .yellow-one, #dokumenCaleg .row .no-margin {
+  padding:10px;
+  border-bottom: solid 1px #fff;
+  border-top: solid 1px #eee;
+}
+#profilCaleg .col-sm-3,#dokumenCaleg .col-sm-3{
+  font-size:12px;
+  color:#ccc;
+  text-align: center;
+}
+#profilCaleg .col-sm-9,#dokumenCaleg .col-sm-9{
+  font-size:14px;
+  color:#888;
+  text-align: center;
+}
